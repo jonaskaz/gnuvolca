@@ -5,6 +5,8 @@ import os
 import subprocess
 import platform
 import signal
+import time
+
 
 from playsound import playsound
 
@@ -26,7 +28,7 @@ def main(directory):
             proc.wait()
 
             playsound(f"{file_out}")
-            
+            time.sleep(3)
             os.remove(file_out)
 
 def clear_samples():
